@@ -8,6 +8,7 @@ from PyQt5.QtMultimedia import QMediaPlayer
 import sys
 
 class VideosView(QMainWindow):
+    """Classe que implementa janela e player do video."""
 
     def __init__(self, parent=None):
         super(VideosView, self).__init__(parent)
