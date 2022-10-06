@@ -22,12 +22,10 @@ class VideosView(QMainWindow):
         self.lb_name_video.setFont(self.utils.format_bold_text())
         self.lb_description_video = QLabel()
         self.lb_description_video.setFixedSize(600, 25)
-        self.lb_description_error = QLabel()
         self.wd_video = QVideoWidget()
         self.player = QMediaPlayer(None, QMediaPlayer.VideoSurface)
         self.slide = QSlider(Qt.Horizontal)
         self.slide.setRange(0, 0)
-        self.slide.sliderMoved.connect(self.setPos)
         self.pb_play = QPushButton()
         self.pb_play.setIcon(self.style().standardIcon(QStyle.SP_MediaPlay))
         self.pb_play.setToolTip('Reproduzir vídeo')
@@ -39,9 +37,6 @@ class VideosView(QMainWindow):
         self.pb_remove.setToolTip('Remover vídeo')
         self.le_search = QLineEdit()
         self.le_search.setPlaceholderText('Buscar vídeos')
-
-    def screen_player(self):
-        """Carrega a janela do player de video."""
         self.lb_name_video.setText('Nome vídeo')
         self.lb_description_video.setText('Descrição vídeo')
         self.vb_lay.addWidget(self.lb_name_video)
@@ -57,5 +52,8 @@ class VideosView(QMainWindow):
         self.vb_lay.addLayout(self.grid_lay_crud)
         self.window.setLayout(self.vb_lay)
         self.player.setVideoOutput(self.wd_video)
+
+    def screen_player(self):
+        """Carrega a janela do player de video."""
         self.window.resize(640, 480)
         self.window.show()

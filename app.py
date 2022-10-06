@@ -1,3 +1,5 @@
+"""Modulo retorna o local absoluto do arquivo de video teste."""
+import os.path
 from PyQt5.QtWidgets import QApplication, QMessageBox
 from PyQt5.QtMultimedia import QMediaContent, QMediaPlayer
 from PyQt5.QtCore import QDir, Qt, QUrl, QFile
@@ -5,7 +7,7 @@ from views.login import LoginView
 from views.videos import VideosView
 from model.model import ModelPostVideo
 from utils.utils import Utils
-import os.path
+
 
 class AppPostVideo:
     """Classe de controle, responsável por fazer a
