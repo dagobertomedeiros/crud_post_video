@@ -49,6 +49,7 @@ class VideosView(QMainWindow):
         self.grid_lay_crud.addWidget(self.pb_add, 0, 0)
         self.grid_lay_crud.addWidget(self.pb_remove, 0, 1)
         self.grid_lay_crud.addWidget(self.le_search, 0, 2)
+        self.vb_lay.setContentsMargins(0, 0, 0, 0)
         self.vb_lay.addLayout(self.grid_lay_crud)
         #self.vb_lay.setStretch(0, 20)
         #self.vb_lay.setStretch(1, 20)
