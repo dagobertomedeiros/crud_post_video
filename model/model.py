@@ -20,5 +20,5 @@ class ModelPostVideo:
         """
         video_1 = {"name": "Mateus Buente",
                    "description": "Comédia baiana de stand up",
-                   "local": "/home/dagoberto/Vídeos/MATHEUS.3gp"}
+                   "local": "files/MATHEUS.3gp"}
         return video_1

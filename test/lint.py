@@ -1,3 +1,4 @@
+"""modulo de teste lint"""
 import sys
 from pylint import lint
 

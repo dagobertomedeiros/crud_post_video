@@ -5,6 +5,7 @@ from PyQt5.QtWidgets import (QFormLayout, QHBoxLayout, QLineEdit,
 from PyQt5.QtCore import Qt
 from PyQt5.QtMultimediaWidgets import QVideoWidget
 from PyQt5.QtMultimedia import QMediaPlayer
+from utils.utils import Utils
 import sys
 
 class VideosView(QMainWindow):
@@ -12,13 +13,17 @@ class VideosView(QMainWindow):
 
     def __init__(self, parent=None):
         super(VideosView, self).__init__(parent)
+        self.utils = Utils()
         self.window = QWidget()
         self.window.setWindowTitle("Player vídeo")
         self.vb_lay = QVBoxLayout()
         self.grid_lay_play = QGridLayout()
         self.grid_lay_crud = QGridLayout()
         self.lb_name_video = QLabel()
+        self.lb_name_video.setFixedSize(600, 25)
+        self.lb_name_video.setFont(self.utils.format_bold_text())
         self.lb_description_video = QLabel()
+        self.lb_description_video.setFixedSize(600, 25)
         self.lb_description_error = QLabel()
         self.wd_video = QVideoWidget()
         self.player = QMediaPlayer(None, QMediaPlayer.VideoSurface)
