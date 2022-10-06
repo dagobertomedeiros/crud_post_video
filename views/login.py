@@ -1,5 +1,5 @@
-from PyQt5.QtWidgets import (QFormLayout, QHBoxLayout, QLineEdit, 
-                             QWidget, QPushButton, QApplication)
+from PyQt5.QtWidgets import (QFormLayout, QHBoxLayout, QLineEdit,
+                             QWidget, QPushButton)
 from PyQt5.QtCore import Qt
 #import sys
 class LoginView:

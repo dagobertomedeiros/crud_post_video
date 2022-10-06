@@ -1,4 +1,3 @@
-#from curses import window
 from PyQt5.QtWidgets import QApplication, QMessageBox
 from PyQt5.QtMultimedia import QMediaContent, QMediaPlayer
 from PyQt5.QtCore import QDir, Qt, QUrl, QFile

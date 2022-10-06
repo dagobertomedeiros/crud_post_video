@@ -1,12 +1,10 @@
-from PyQt5.QtWidgets import (QFormLayout, QHBoxLayout, QLineEdit, 
-                             QWidget, QPushButton, QApplication,
+from PyQt5.QtWidgets import (QLineEdit, QWidget, QPushButton,
                              QGridLayout, QVBoxLayout, QLabel,
                              QSlider, QStyle, QMainWindow)
 from PyQt5.QtCore import Qt
 from PyQt5.QtMultimediaWidgets import QVideoWidget
 from PyQt5.QtMultimedia import QMediaPlayer
 from utils.utils import Utils
-import sys
 
 class VideosView(QMainWindow):
     """Classe que implementa janela e player do video."""
@@ -41,9 +39,9 @@ class VideosView(QMainWindow):
         self.pb_remove.setToolTip('Remover vídeo')
         self.le_search = QLineEdit()
         self.le_search.setPlaceholderText('Buscar vídeos')
-        
 
     def screen_player(self):
+        """Carrega a janela do player de video."""
         self.lb_name_video.setText('Nome vídeo')
         self.lb_description_video.setText('Descrição vídeo')
         self.vb_lay.addWidget(self.lb_name_video)
@@ -57,30 +55,7 @@ class VideosView(QMainWindow):
         self.grid_lay_crud.addWidget(self.le_search, 0, 2)
         self.vb_lay.setContentsMargins(0, 0, 0, 0)
         self.vb_lay.addLayout(self.grid_lay_crud)
-        #self.vb_lay.setStretch(0, 20)
-        #self.vb_lay.setStretch(1, 20)
-
-
-        #self.pb_yes.setFixedSize(100, 25)
-        #self.pb_no.setFixedSize(100, 25)
-        #self.form_lay.addRow('Usuário: ', self.le_name)
-        #self.form_lay.addRow('Senha: ', self.le_password)
-        #self.hb_lay.addWidget(self.pb_yes)
-        #self.hb_lay.addWidget(self.pb_no)
-        #self.form_lay.addRow(self.hb_lay)
         self.window.setLayout(self.vb_lay)
         self.player.setVideoOutput(self.wd_video)
-        #self.form_lay.setFormAlignment(Qt.AlignHCenter)
-        #app = QApplication.instance()
-        #allScreen = app.primaryScreen()
-        #geometry = allScreen.availableGeometry()
-        #print(geometry.width())
         self.window.resize(640, 480)
-
         self.window.show()
-        
-    def setPos(self, position):
-        self.player.setPosition(position)
-
-    def get_password(self):
-        pass
