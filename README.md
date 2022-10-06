@@ -17,4 +17,4 @@ se quer houve tempo hábil para escolher e implementar.
 pode notar que sua reprodução é simples, basta clicar no botão com sinal de "+", em seguida clica no botão play. Lembrando que o login é "Chico" e a senha "1234".
 
 Importante: Para sua execução é importante possuir o PyQt5 instalado, para isso basta no terminal de seu computador
-[digitar pip install pyqt5].
+[pip install pyqt5].
