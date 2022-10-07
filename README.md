@@ -3,7 +3,9 @@
 
 Aplicação construída como um monolíto. Utilizando o conceito da arquitetura MVC.
 Toda a implementação foi realizada utilizando PyQt5 e Python 3.10.
-Sua execução é muito simples, bastando apenas executar o arquivo na raiz do projeto app.py, tal execução pode ser diretamente pelo terminal ou mesmo utilizando uma venv.
+
+### Execução
+Para rodar o app é muito simples, bastando apenas executar o arquivo na raiz do projeto app.py, tal execução pode ser diretamente pelo terminal digitando [python3 app.py].
 
 Ressalvas:
 - Houve problemas com a instalação do MongoDB no PC, por isso não pude fazer o CRUD com o BD, já tinha tomado nota de como funciona a autenticação, consultas e inserções, todavia, há algum problema com a versão do Ubuntu que estou utilizando, tentei até usar uma instância via docker, porém não foi trivial e me consumiu muito tempo sem garantir o sucesso esperado. Todo esse esforço comprometeu parte das tarefas pretendidas, inclusive o login via middleware, que se quer houve tempo hábil para escolher e implementar.
